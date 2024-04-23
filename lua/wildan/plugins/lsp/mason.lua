@@ -56,6 +56,7 @@ return {
         "google-java-format",
         "phpcs", -- php linter
         "php-cs-fixer", -- php formatter
+        "mdformat",
       },
     })
   end,
