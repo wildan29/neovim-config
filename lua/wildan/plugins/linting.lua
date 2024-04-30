@@ -22,6 +22,7 @@ return {
       "-",
     }
 
+    -- custom linting for eslint_d
     lint.linters.eslint_d.args = {
       "--no-warn-ignored", -- <-- this is the key argument
       "--format",
@@ -31,6 +32,13 @@ return {
       function()
         return vim.api.nvim_buf_get_name(0)
       end,
+    }
+
+    -- custom linting for php
+    lint.linters.phpcs.args = {
+      "--standard=PSR12", -- Or any other standard you prefer
+      "--severity=8", -- Set the severity level
+      "--report=emacs", -- Report format
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
