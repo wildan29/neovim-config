@@ -4,7 +4,14 @@ return {
   build = "deno task --quiet build:fast",
   config = function()
     require("peek").setup()
-    vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-    vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    local peek = require("peek")
+
+    vim.keymap.set("n", "<leader>mdo", function()
+      peek.open()
+    end, { desc = "Markdown Preview Open" })
+
+    vim.keymap.set("n", "<leader>mdc", function()
+      peek.close()
+    end, { desc = "Markdown Preview Close" })
   end,
 }
