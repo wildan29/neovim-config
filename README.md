@@ -114,5 +114,3 @@ You can check this youtube or articles for setup neovim
 - ### Check Lazy health
 
 <img width="1728" alt="Screenshot 2024-04-24 at 01 46 33" src="https://github.com/wildan29/neovim-config/assets/91782397/e8e7ae03-3343-4901-8567-d2e3be4f6ff8">
-
-### test
