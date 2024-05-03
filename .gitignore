@@ -4,4 +4,4 @@
 # Gitignore for the following technologies: Vim
 
 # File
-test.txt
+lazy-lock.json
