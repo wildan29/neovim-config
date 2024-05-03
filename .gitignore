@@ -1,0 +1,7 @@
+#--------------------------------------------------#
+# The following was generated with gitignore.nvim: #
+#--------------------------------------------------#
+# Gitignore for the following technologies: Vim
+
+# File
+lazy-lock.json
