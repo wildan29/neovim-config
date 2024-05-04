@@ -37,6 +37,9 @@ return {
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
 
+    -- remove default button in bottom dashboard
+    dashboard.section.bottom_buttons.val = {}
+
     -- Send config to alpha
     alpha.setup(dashboard.opts)
 
