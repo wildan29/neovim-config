@@ -28,7 +28,7 @@ return {
     }
 
     -- Set menu
-    dashboard.section.bottom_buttons.val = {
+    dashboard.section.top_buttons.val = {
       dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
       dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
       dashboard.button("SPC ff", "󰱼 > Find File", "<cmd>Telescope find_files<CR>"),
