@@ -83,7 +83,7 @@ You can check this youtube or articles for setup neovim
 
 - #### Main page of neovim
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 10 26" src="https://github.com/wildan29/neovim-config/assets/91782397/bf89b660-9318-4154-bbf6-ec96ba7ffe0d">
+<img width="1728" alt="Screenshot 2024-05-04 at 13 14 11" src="https://github.com/wildan29/neovim-config/assets/91782397/2d4a9473-fdbe-4044-be54-ff372a0b5d90">
 
 - #### Create new file
 
