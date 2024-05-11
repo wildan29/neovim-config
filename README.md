@@ -79,38 +79,72 @@ You can check this youtube or articles for setup neovim
 - Plugin that enhances the handling of diagnostics [trouble.nvim](https://github.com/folke/trouble.nvim).
 - Plugin that maximize and restores the current split windows [vim-maximizer](https://github.com/szw/vim-maximizer).
 
-### UI
+<!-- ### UI -->
 
-- #### Main page of neovim
+<!---->
 
-<img width="1728" alt="Screenshot 2024-05-11 at 16 53 16" src="https://github.com/wildan29/neovim-config/assets/91782397/ded0d315-c8d2-4cb5-820d-edb458a293be">
+<!-- - #### Main page of neovim -->
 
-- #### Create new file
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 42 50" src="https://github.com/wildan29/neovim-config/assets/91782397/ca3b3fc2-17a2-44e8-9fa5-c7700f8201a9">
+<!-- <img width="1728" alt="Screenshot 2024-05-11 at 16 53 16" src="https://github.com/wildan29/neovim-config/assets/91782397/ded0d315-c8d2-4cb5-820d-edb458a293be"> -->
 
-- #### Open project structure
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 43 03" src="https://github.com/wildan29/neovim-config/assets/91782397/2ff67619-cd92-4044-ba91-10e217dabc1c">
+<!-- - #### Create new file -->
 
-- #### Find file in project
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 44 13" src="https://github.com/wildan29/neovim-config/assets/91782397/03496e1e-6179-4d3c-a8f4-3758ce4319e4">
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 42 50" src="https://github.com/wildan29/neovim-config/assets/91782397/ca3b3fc2-17a2-44e8-9fa5-c7700f8201a9"> -->
 
-- #### Split horizontal/vertical
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 44 27" src="https://github.com/wildan29/neovim-config/assets/91782397/f3ef52db-8183-49b5-bec0-d354a4a095cc">
+<!-- - #### Open project structure -->
 
-- #### Create New Tab
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 44 44" src="https://github.com/wildan29/neovim-config/assets/91782397/d0f6126f-3f65-4cfb-8e60-17109e4b289c">
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 43 03" src="https://github.com/wildan29/neovim-config/assets/91782397/2ff67619-cd92-4044-ba91-10e217dabc1c"> -->
 
-- #### Open Lazy UI
-  <img width="1728" alt="Screenshot 2024-04-24 at 01 45 50" src="https://github.com/wildan29/neovim-config/assets/91782397/a38a40a1-0772-4271-8c86-035df6579022">
-- ### Open Mason UI
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 46 04" src="https://github.com/wildan29/neovim-config/assets/91782397/1b14c64d-8b2b-4bc9-824e-c024920d79ef">
+<!-- - #### Find file in project -->
 
-- ### Check Lazy health
+<!---->
 
-<img width="1728" alt="Screenshot 2024-04-24 at 01 46 33" src="https://github.com/wildan29/neovim-config/assets/91782397/e8e7ae03-3343-4901-8567-d2e3be4f6ff8">
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 44 13" src="https://github.com/wildan29/neovim-config/assets/91782397/03496e1e-6179-4d3c-a8f4-3758ce4319e4"> -->
+
+<!---->
+
+<!-- - #### Split horizontal/vertical -->
+
+<!---->
+
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 44 27" src="https://github.com/wildan29/neovim-config/assets/91782397/f3ef52db-8183-49b5-bec0-d354a4a095cc"> -->
+
+<!---->
+
+<!-- - #### Create New Tab -->
+
+<!---->
+
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 44 44" src="https://github.com/wildan29/neovim-config/assets/91782397/d0f6126f-3f65-4cfb-8e60-17109e4b289c"> -->
+
+<!---->
+
+<!-- - #### Open Lazy UI -->
+
+<!--   <img width="1728" alt="Screenshot 2024-04-24 at 01 45 50" src="https://github.com/wildan29/neovim-config/assets/91782397/a38a40a1-0772-4271-8c86-035df6579022"> -->
+
+<!-- - ### Open Mason UI -->
+
+<!---->
+
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 46 04" src="https://github.com/wildan29/neovim-config/assets/91782397/1b14c64d-8b2b-4bc9-824e-c024920d79ef"> -->
+
+<!---->
+
+<!-- - ### Check Lazy health -->
+
+<!---->
+
+<!-- <img width="1728" alt="Screenshot 2024-04-24 at 01 46 33" src="https://github.com/wildan29/neovim-config/assets/91782397/e8e7ae03-3343-4901-8567-d2e3be4f6ff8"> -->
