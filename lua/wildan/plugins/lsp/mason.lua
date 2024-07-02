@@ -40,6 +40,7 @@ return {
         "kotlin_language_server",
         "jdtls",
         "intelephense",
+        "texlab",
       },
     })
 

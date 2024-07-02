@@ -38,3 +38,17 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- change cursor style
 vim.o.guicursor = "n-v-c-sm-i-ci-ve:ver25-iCursor"
 -- vim.o.guicursor = "n-c-v-sm:block-nCursor"
+
+-- Latex Config
+-- Enable filetype plugins and indentation
+vim.cmd([[filetype plugin indent on]])
+
+-- Enable syntax highlighting
+vim.cmd([[syntax enable]])
+
+-- Set the compiler method
+-- vim.g.vimtex_compiler_method = "latexrun"
+
+-- Set the localleader key
+vim.g.maplocalleader = ","
+-- vim.g.vimtex_view_method = "zathura"

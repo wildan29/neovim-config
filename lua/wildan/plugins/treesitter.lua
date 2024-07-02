@@ -13,6 +13,7 @@ return {
     treesitter.setup({ -- enable syntax highlighting
       highlight = {
         enable = true,
+        disable = { "latex" },
       },
       -- enable indentation
       indent = { enable = true },
@@ -46,6 +47,7 @@ return {
         "python",
         "java",
         "php",
+        "latex",
       },
       incremental_selection = {
         enable = true,
