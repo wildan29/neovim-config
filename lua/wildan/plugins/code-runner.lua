@@ -4,7 +4,9 @@ return {
     require("code_runner").setup({
       filetype = {
         java = {
-          "javac -d . $fullFileName",
+          "cd $dir &&",
+          "javac $fileName &&",
+          "java $fileNameWithoutExt",
         },
         python = "python3 -u",
         typescript = "deno run --allow-read --allow-net",
@@ -41,10 +43,32 @@ return {
     })
     vim.keymap.set("n", "<leader>Rc", ":RunCode<CR>", { noremap = true, silent = false })
     vim.keymap.set("n", "<leader>Rf", ":RunFile<CR>", { noremap = true, silent = false })
-    vim.keymap.set("n", "<leader>Rft", ":RunFile tab<CR>", { noremap = true, silent = false })
+    vim.keymap.set("n", "<leader>RT", ":RunFile tab<CR>", { noremap = true, silent = false })
     vim.keymap.set("n", "<leader>Rp", ":RunProject<CR>", { noremap = true, silent = false })
-    vim.keymap.set("n", "<leader>Rc", ":RunClose<CR>", { noremap = true, silent = false })
+    vim.keymap.set("n", "<leader>Rx", ":RunClose<CR>", { noremap = true, silent = false })
     vim.keymap.set("n", "<leader>CRF", ":CRFiletype<CR>", { noremap = true, silent = false })
+    vim.keymap.set("n", "<leader>Ri", function()
+      local ft = vim.bo.filetype
+      local dir = vim.fn.expand("%:p:h")
+      local file = vim.fn.expand("%:t")
+      local name = vim.fn.expand("%:t:r")
+      local input = dir .. "/input.txt"
+
+      if vim.fn.filereadable(input) == 0 then
+        vim.fn.writefile({}, input)
+      end
+
+      local cmd = ""
+      if ft == "java" then
+        cmd = "cd " .. dir .. " && javac " .. file .. " && java " .. name .. " < input.txt"
+      elseif ft == "python" then
+        cmd = "cd " .. dir .. " && python3 " .. file .. " < input.txt"
+      elseif ft == "cpp" or ft == "c" then
+        cmd = "cd " .. dir .. " && g++ " .. file .. " -o " .. name .. " && ./" .. name .. " < input.txt"
+      end
+
+      vim.cmd("split | terminal " .. cmd)
+    end, { noremap = true, silent = true, desc = "Run with input.txt (CP mode)" })
     vim.keymap.set("n", "<leader>CRP", ":CRProjects<CR>", { noremap = true, silent = false })
   end,
 }
