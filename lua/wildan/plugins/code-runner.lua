@@ -3,11 +3,29 @@ return {
   config = function()
     require("code_runner").setup({
       filetype = {
-        java = {
-          "cd $dir &&",
-          "javac $fileName &&",
-          "java $fileNameWithoutExt",
-        },
+        java = function()
+          -- 1. Try to find the project root using multiple markers
+          -- It will look for .git, then .gitignore, then a folder named 'src'
+          local root = vim.fs.root(0, { ".git", ".gitignore", "src", "pom.xml", "build.gradle" }) or vim.fn.getcwd() -- Final fallback to where you opened nvim
+
+          local file_path = vim.api.nvim_buf_get_name(0)
+          local file_dir = vim.fn.expand("%:p:h")
+          local name_no_ext = vim.fn.expand("%:t:r")
+
+          -- 2. Calculate relative path from the ROOT we just found
+          -- This ensures that if root is 'MyProject', and file is in 'src/A.java',
+          -- rel_path becomes 'src'
+          local rel_path = vim.fn.fnamemodify(file_dir, ":s?" .. root .. "/??")
+
+          -- 3. Define the target
+          local target_out = root .. "/out/" .. rel_path
+
+          require("code_runner.commands").run_from_fn({
+            "mkdir -p " .. target_out .. " &&",
+            "javac -d " .. target_out .. " " .. file_path .. " &&",
+            "java -cp " .. target_out .. " " .. name_no_ext,
+          })
+        end,
         python = "python3 -u",
         typescript = "deno run --allow-read --allow-net",
         rust = {
