@@ -4,26 +4,27 @@ return {
     require("code_runner").setup({
       filetype = {
         java = function()
-          -- 1. Try to find the project root using multiple markers
-          -- It will look for .git, then .gitignore, then a folder named 'src'
-          local root = vim.fs.root(0, { ".git", ".gitignore", "src", "pom.xml", "build.gradle" }) or vim.fn.getcwd() -- Final fallback to where you opened nvim
-
+          local root = vim.fs.root(0, { ".git", ".gitignore", "pom.xml", "build.gradle" }) or vim.fn.getcwd()
           local file_path = vim.api.nvim_buf_get_name(0)
-          local file_dir = vim.fn.expand("%:p:h")
           local name_no_ext = vim.fn.expand("%:t:r")
+          local target_out = root .. "/out"
 
-          -- 2. Calculate relative path from the ROOT we just found
-          -- This ensures that if root is 'MyProject', and file is in 'src/A.java',
-          -- rel_path becomes 'src'
-          local rel_path = vim.fn.fnamemodify(file_dir, ":s?" .. root .. "/??")
+          local package_name = nil
+          local lines = vim.fn.readfile(file_path)
+          for _, line in ipairs(lines) do
+            local pkg = line:match("^package%s+([%w%.]+)%s*;")
+            if pkg then
+              package_name = pkg
+              break
+            end
+          end
 
-          -- 3. Define the target
-          local target_out = root .. "/out/" .. rel_path
+          local run_class = package_name and (package_name .. "." .. name_no_ext) or name_no_ext
 
           require("code_runner.commands").run_from_fn({
             "mkdir -p " .. target_out .. " &&",
             "javac -d " .. target_out .. " " .. file_path .. " &&",
-            "java -cp " .. target_out .. " " .. name_no_ext,
+            "java -cp " .. target_out .. " " .. run_class,
           })
         end,
         python = "python3 -u",
