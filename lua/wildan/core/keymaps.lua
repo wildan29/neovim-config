@@ -106,10 +106,10 @@ keymap.set("n", "<F8>", function()
       vim.cmd("edit " .. dest)
 
       -- Buat input.txt juga
-      local inp = vim.fn.expand("%:p:h") .. "/input.txt"
-      if vim.fn.filereadable(inp) == 0 then
-        vim.fn.writefile({}, inp)
-      end
+      -- local inp = vim.fn.expand("%:p:h") .. "/input.txt"
+      -- if vim.fn.filereadable(inp) == 0 then
+      --   vim.fn.writefile({}, inp)
+      -- end
     end)
   end)
 end, { desc = "CP: Pilih template" })
