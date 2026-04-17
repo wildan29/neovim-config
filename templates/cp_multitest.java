@@ -39,11 +39,7 @@ public class __CLASSNAME__ {
     String nextLine() {
       String str = "";
       try {
-        if (s.hasMoreTokens()) {
-          str = s.nextToken("\n");
-        } else {
-          str = b.readLine();
-        }
+        str = b.readLine();
       } catch (IOException e) {
         e.printStackTrace();
       }
